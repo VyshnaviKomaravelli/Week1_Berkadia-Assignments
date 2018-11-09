@@ -1,0 +1,164 @@
+-------HTTP  METHODS DESCRIPTIONS-----------------------------------
+
+Request   Description
+
+HEAD	    Asks for the response identical to the one that would correspond to a GET request.  But without the response body. This is good for retrieving meta information in the response headers, but without transporting the entire content.
+
+GET	      Requests information from a server.
+
+POST	    Submits data to be processed to the server. The data is included in the body of the request. The result of the request might be the creation of the resource or updating  the existing resource.
+
+PUT	      Uploads a representation of the resource.
+
+DELETE	  Deletes the specified resource.
+
+TRACE	    Echoes the request back to the browser so that the client can see which servers are adding or changing in the request.
+
+OPTIONS	  Returns HTTP methods that the server supports for the given URL. This can be used to check the functionality of a web server.
+
+CONNECT	  Converts the request connection to a transparent TCP/IP tunnel. It’s usually used
+              to facilitate SSL-encrypted communication through an unencrypted HTTP proxy.
+PATCH	    This method is used to apply partial modifications to a resource.
+
+-------HTTP RESPONSE/STATUS CODES----------------------------------------------
+
+The 1xx block: informational requests;
+The 2xx block: successful requests;
+The 3xx block: redirects;
+The 4xx block: client errors;
+The 5xx block: server errors.
+
+The 1xx HTTP Status Codes
+
+100 – Continue;
+101 – Switching protocol;
+103 – Checkpoints.
+
+The 2xx HTTP Status Codes
+
+200 – OK (you will see this one the most);
+201 – Created;
+202 – Accepted;
+205 – Reset Content;
+206 – Partial Content.
+
+The 3xx HTTP Status Codes
+
+301 – Moved Permanently;
+302 – Found;
+304 – Not Modified;
+305 – Use Proxy;
+307 – Temporary Redirect.
+
+The 4xx HTTP Status Codes
+These are all for client errors. 
+
+400: Bad Request;
+401: Unauthorized;
+403: Forbidden;
+404: Not Found;
+408: Request Timeout;
+410: Gone;
+429: Too Many Requests.
+
+The 5xx HTTP Status Codes
+These appear when the client made a good request, but the server didn’t complete it.
+500 – Internal Server Error;
+502 – Bad Gateway;
+503 – Service Unavailable;
+504 – Gateway Timeout.
+
+----------------IDEMPOTENCY-----------------
+
+Idempotence is a property of some operations such that no matter how many times you execute them, the same result is achieved.
+
+HTTP Method 	Idempotent  	
+OPTIONS	      yes	
+GET	          yes  
+HEAD	        yes 
+PUT	          yes	
+POST	        no	
+DELETE	      yes	 
+PATCH	        no	
+
+-------CONTENT DELIVERY NETWORK -----------------
+A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide
+fast delivery of Internet content. A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages,
+javascript files, stylesheets, images, and videos.
+
+--------MEAN AND MERN STACKS-----------------
+M - MongoDB is a schemaless NoSQL database system. 
+    MongoDB saves data in binary JSON format which makes it easier to pass data between client and server.
+
+E - Express is lightweight framework used to build web applications in Node.
+    It provides a number of robust features for building single and multi page web application. 
+    Express is inspired by the popular Ruby framework, Sinatra.
+A - AngularJS is a JavaScript framework developed by Google. 
+    It provides some awesome features like the two-way data binding.
+    It’s a complete solution for rapid and awesome front end development.
+N - Node.js is a server side JavaScript execution environment. 
+    It’s a platform built on Google Chrome’s V8 JavaScript runtime. 
+    It helps in building highly scalable and concurrent applications rapidly.
+MERN IS SAME AS MEAN BUT 'R' REPRESENTS REACTJS 
+R - ReactJS basically is an open-source JavaScript library which is used for building user interfaces 
+      specifically for single page applications. 
+    It’s used for handling view layer for web and mobile apps. 
+    React also allows us to create reusable UI components.
+    
+---------------ADVANTAGES OF COMPILED OVER INTREPRETED LANGUAGES--------------------
+* Compiled implementations of languages have the advantage of being faster because they translate directly to the native code of the
+specific machine.
+- Pre-Compiled binaries are inherently more difficult to reverse-engineer and are therefore helpful to closed-source software providers
+  wishing to keep the I.P. contained in their source code private. 
+- Once a program is translated into native instructions (machine code), it can then be executed over and over again without 
+  the overhead of this translation. 
+- Ability to support architectures the interpreter hasn't been compiled for (such as embedded systems) 
+- Can be optimized more heavily due to larger window of code to be translated.
+
+------------TIME AND SPACE COMPLEXITIES-------------------
+Time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the input. 
+Space complexity of an algorithm quantifies the amount of space/memory taken by an algorithm to run as a function of the length of input.
+
+----------DATA STRUCTURES-----------------------
+A data structure is a data organization, management and storage format that enables efficient access and modification.
+More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can
+be applied to the data.
+EX : Array,Linked List,Stack,Queue etc...
+------------------SINGLE THREADING AND MULTI THREADING----------
+In computer programming, single-threading is the processing of one command at a time.
+The opposite of single-threading is multithreading.
+The difference between single thread and multi-thread is the amount of tasks you split the execution of a program out.
+-----------------------------MULTI PROCESSING AND MULTI THREADING----------------------
+
+The major difference between the two is that in multithreading threads are being executed in one process sharing common address space
+whereas in multi processing different processes have different address space.
+* A multiprocessing system is one which has more than two processors. The CPUs are added to the system to increase the computing speed of the system.
+  Each CPU has its own set of registers and main memory
+* Multithreading is the execution of multiple threads of a single process concurrently within the context of that process.
+
+---------------------------SYNCHRONOUS AND ASYNCHRONOUS PROGRAMMINS--------------
+Synchronous way: It waits for each operation to complete, after that only it executes the next operation.   
+Asynchronous way: It never waits for each operation to complete, rather it executes all operations in the first GO only. 
+The result of each operation will be handled once the result is available.
+C# SUPPORTS BOTH OF THEM.
+----------------------LIBUV----------
+libuv is a library that allows your JavaScript code (via V8) to perform I/O, whether it is network, file etc.
+So from TCP level connectivity all the way to file/system ops are actually performed by the libuv library.
+-----------------------------EVENT LOOP---------
+The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by
+offloading operations to the system kernel whenever possible.
+Since most modern kernels are multi-threaded, they can handle multiple operations executing in the background.
+When one of these operations completes,the kernel tells Node.js so that the appropriate callback may be added to the poll queue to 
+eventually be executed.
+----------V8 ENGIINE------------
+V8 compiles JavaScript directly to native machine code before executing it, instead of more traditional techniques such as interpreting 
+bytecode or compiling the whole program to machine code and executing it from a filesystem.
+The compiled code is additionally optimized (and re-optimized) dynamically at runtime,
+based on heuristics of the code's execution profile.
+----------------NON-BLOCKING I/O-----------
+* Non-blocking IO means an IO request is queued straight away and the function returns. The actual IO is then processed at some later pointer by the kernel.
+* For non-blocking IO you can send off multiple requests but you need to bear in mind that the data will not be available until some "later" point. 
+This checking that the data has actually arrived is probably the most complicated part.
+----------------NODE JS UNIQUENESS-----------
+Using nodejs web applications with real-time, two-way connections, where both the client and server can initiate communication,
+allowing them to exchange data freely.
